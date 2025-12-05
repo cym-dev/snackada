@@ -1286,3 +1286,138 @@ img {
         text-align: center !important;
     }
 }
+
+/* ====================================
+   VISION & HISTORY SECTION STYLES
+   ==================================== */
+
+.vision-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+    position: relative;
+}
+
+.vision-content {
+    padding: 2rem;
+}
+
+.vision-points {
+    background: rgba(190, 47, 48, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.vision-points .d-flex {
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.vision-points .d-flex:hover {
+    background: rgba(190, 47, 48, 0.05);
+    transform: translateX(10px);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--darker-brown) 100%);
+}
+
+.history-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.history-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary-color) 0%, transparent 100%);
+}
+
+.timeline-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.history-timeline .d-flex {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.history-timeline .d-flex:hover {
+    background: rgba(190, 47, 48, 0.03);
+    transform: translateX(10px);
+}
+
+.history-timeline .d-flex::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px rgba(190, 47, 48, 0.2);
+    z-index: 3;
+}
+
+/* Blockquote Styling */
+blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 2rem;
+}
+
+.blockquote-footer {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.blockquote-footer::before {
+    content: "— ";
+}
+
+/* Vision & History Responsive */
+@media (max-width: 991.98px) {
+    .vision-content {
+        padding: 1rem;
+    }
+    
+    .vision-points {
+        padding: 1.5rem;
+    }
+    
+    .history-timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .bg-gradient-primary {
+        padding: 3rem 2rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .vision-points .d-flex:hover {
+        transform: translateX(5px);
+    }
+    
+    .history-timeline .d-flex:hover {
+        transform: translateX(5px);
+    }
+    
+    .history-timeline::before {
+        left: 15px;
+    }
+    
+    .history-timeline .d-flex::before {
+        left: -1.5rem;
+    }
+}
