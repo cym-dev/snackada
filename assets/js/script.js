@@ -280,3 +280,26 @@ document.addEventListener('DOMContentLoaded', function() {
         firstSection.id = 'main-content';
     }
 });
+
+// Promo See More/Less Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const collapseElement = document.getElementById('promo1Details');
+    
+    if (collapseElement) {
+        collapseElement.addEventListener('show.bs.collapse', function () {
+            const btn = document.querySelector('[data-bs-target="#promo1Details"]');
+            if (btn) {
+                btn.querySelector('.see-more-text').classList.add('d-none');
+                btn.querySelector('.see-less-text').classList.remove('d-none');
+            }
+        });
+        
+        collapseElement.addEventListener('hide.bs.collapse', function () {
+            const btn = document.querySelector('[data-bs-target="#promo1Details"]');
+            if (btn) {
+                btn.querySelector('.see-more-text').classList.remove('d-none');
+                btn.querySelector('.see-less-text').classList.add('d-none');
+            }
+        });
+    }
+});
